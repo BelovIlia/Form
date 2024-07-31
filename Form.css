@@ -1,3 +1,13 @@
+.form__one{
+    position: absolute;
+    left: 730px;
+    width: 506px;
+    height: 400px;
+    background: rgba(44, 41, 41,200);
+    border-radius: 2%;
+
+}
+
 .form__two{
     position: absolute;
     left: 730px;
