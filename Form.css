@@ -1,0 +1,109 @@
+.form__two{
+    position: relative;
+    left: 730px;
+    width: 506px;
+    height: 509px;
+    background: #131313;
+    box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.05);
+    color:#FFF;
+
+}
+
+.head__form{
+    width: 230px;
+    height: 47px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 143.22%;
+    margin: 0 auto;
+    padding-top: 28px;
+}
+
+.fieldcaption{
+    width: 41.616px;
+    height: 16px;
+    color: rgba(255, 255, 255, 0.50);
+    font-family: "Nunito Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 163.68%;
+}
+
+.greystripe{
+    width: 408px;
+    height: 1px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.label__form{
+    color: #FFF;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 163.68%; 
+}
+
+.input__form{
+    background-color: #131313;
+    border: none;
+    color: #FFF;
+    outline: none;
+}
+
+.elem__form-name{
+    padding-top: 39px;
+    padding-left: 49px;
+}
+
+.elem__form-phone{
+    padding-top: 48px;
+    padding-left: 49px;
+}
+
+.elem__form-email{
+    padding-top: 39px;
+    padding-left: 49px;
+    padding-bottom: 16px;
+}
+
+.check_form{
+    padding-left: 49px;
+}
+
+.buttom-form{
+    margin-top: 39px;
+    margin-left: 224px;
+    cursor: pointer;
+}
+
+.money-box{
+    height: 72px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 750px;
+}
+
+.img_money-box{
+    width: 102px;
+    height: 102px;
+    margin-right: 25px;
+}
+
+.saving{
+    width: 200px;
+    height: 47px;
+    color: #E3B873;
+    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+    font-family: "Nunito Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 143.22%;
+}
