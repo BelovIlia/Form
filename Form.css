@@ -187,16 +187,16 @@
 }
 
 .input__form3{
-  height: 20px;
-  width: 290px;
-  border: 1px solid rgba(168, 168, 168, 0.384);
-  background: rgba(255,255,255,.25);
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 10px;
-  padding-right: 100px;
-  outline: none;
-  color: #FFF;
+    height: 20px;
+    width: 290px;
+    border: none;
+    background-color: rgba(44, 41, 41,200);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    padding-right: 100px;
+    outline: none;
+    color: #FFF;
 }
 
 .elem__form-name3{
@@ -209,8 +209,8 @@
 }
 
 .elem__form-email3{
-    padding-top: 39px;
-    padding-bottom: 16px;
+    padding-left: 49px;
+    padding-top: 10px;
 }
 
 .check_form3{

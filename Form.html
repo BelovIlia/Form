@@ -7,21 +7,21 @@
 </head>
 <body>
         <!-- Форма1 -->
-    <form class="form__one" action="" style="display: none;">
+    <form class="form__one" action="" >
         <h2 class="head__form1">Register</h2>
         <div class="elem__form-name">
-            <label class="label__form" for="">Name</label><br>
-            <input class="input__form" type="text" placeholder="Enter your name">
+            <label class="label__form" >Name</label><br>
+            <input class="input__form" type="text" placeholder="Enter your name" name="name" id="1">
             <div class="elem__form-email">
                 <label class="label__form" for="">Email</label><br>
-                <input class="input__form" type="text" placeholder="example@gmail.com">
+                <input class="input__form" type="text" placeholder="example@gmail.com" name="Email">
             </div>
         </div>
         <button class="submit_button buttom-form">Continue</button>
         </form>
  
                         <!-- Форма2 -->
-    <form class="form__two" action="" style="display: none;">
+    <form class="form__two" action="" >
         <h2 class="head__form2">Which topics you are interested in?</h2>
         <div class="elem__form-name2">
             <input class="input__form2" type="text" placeholder="Software Developer">
@@ -40,12 +40,16 @@
     <form class="form__three" action="" >
         <h2 class="head__form3">Summary</h2>
         <div class="elem__form-name3">
-            <label class="label__form3" for="">Name</label>
-            <input class="input__form3" type="text" placeholder="Enter your name">
-            <div class="elem__form-email3">
-                <label class="label__form3" for="">Email</label>
-                <input class="input__form3" type="text" placeholder="example@gmail.com">
-            </div>
+            <label class="label__form3" >Name:</label>
+            <input class="input__form3" type="text" id="2">
+        </div>
+        <div class="elem__form-email3">
+            <label class="label__form3" >Email:</label>
+            <input class="input__form3" type="text" >
+        </div>
+        <div class="elem__form-email3">
+            <label class="label__form3" >Topics:</label>
+            <input class="input__form3" type="text" >
         </div>
         <button class="submit_button3 buttom-form">Continue</button>
     </form>
