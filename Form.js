@@ -24,8 +24,8 @@ const SumExperience = document.getElementById('SumExperience');
 const SumDesign = document.getElementById('SumDesign');
 
 SumName.addEventListener('input', () => inputName.value = SumName.value);
-SumName.addEventListener('input', () => inputName.value = SumName.value);
-SumName.addEventListener('input', () => inputName.value = SumName.value);
-SumName.addEventListener('input', () => inputName.value = SumName.value);
+inputEmail.addEventListener('input', () => SumEmail.value = inputEmail.value);
+inputExperiemce.addEventListener('input', () => SumExperience.value = inputExperiemce.value);
+inputDesign.addEventListener('input', () => SumDesign.value = inputDesign.value);
 
 
