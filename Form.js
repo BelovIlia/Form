@@ -14,6 +14,18 @@ for(let button of buttons){
     });
 }
 
-document.getElementById('1').addEventListener('change', function(e){
-    document.getElementById('2').value = e.target.value;
-})
+const inputName = document.getElementById('name');
+const inputEmail = document.getElementById('email');
+const inputExperiemce = document.getElementById('experience');
+const inputDesign = document.getElementById('design');
+const SumName = document.getElementById('SumName');
+const SumEmail = document.getElementById('SumEmail');
+const SumExperience = document.getElementById('SumExperience');
+const SumDesign = document.getElementById('SumDesign');
+
+SumName.addEventListener('input', () => inputName.value = SumName.value);
+SumName.addEventListener('input', () => inputName.value = SumName.value);
+SumName.addEventListener('input', () => inputName.value = SumName.value);
+SumName.addEventListener('input', () => inputName.value = SumName.value);
+
+
