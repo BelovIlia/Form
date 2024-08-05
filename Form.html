@@ -7,7 +7,7 @@
 </head>
 <body>
         <!-- Форма1 -->
-    <form class="form__one" action="" >
+    <form class="form__one" action=""  data-step="1" data-stop="10" data-array="[1,2,3]">
         <h2 class="head__form1">Register</h2>
         <div class="elem__form-name">
             <label class="label__form" >Name</label><br>
@@ -21,7 +21,7 @@
         </form>
  
                         <!-- Форма2 -->
-    <form class="form__two" action="" >
+    <form class="form__two" action="" style="display: none;" data-step="2">
         <h2 class="head__form2">Which topics you are interested in?</h2>
         <div class="elem__form-name2">
             <input class="input__form2" type="text" placeholder="Software Developer">
@@ -33,11 +33,11 @@
             <input class="input__form2" type="text" placeholder="Graphic Design" id="design">
         </div>
         <button class="submit_button2 buttom-form2">Continue</button>
-    </form>
+    </form> 
 
                                             <!-- Форма3 -->
 
-    <form class="form__three" action="" >
+    <form class="form__three" action="" style="display: none;" data-step="3">
         <h2 class="head__form3">Summary</h2>
         <div class="elem__form-name3">
             <label class="label__form3" >Name:</label>
@@ -53,7 +53,7 @@
             <input class="input__form3" type="text" id="SumDesign">
         </div>
         <button class="submit_button3 buttom-form">Continue</button>
-    </form>
+    </form> 
 <script src="./Form.js"></script>
 </body>
 </html>
