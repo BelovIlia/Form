@@ -252,10 +252,20 @@
     border: none;
     border-radius: 50%;
     margin: 10px;
+    cursor: pointer;
 }
 
-.DotsNav li .active{
+.DotsNav li:hover{
     background-color: #814ec4;
-    box-shadow: #a479db;
+    border: 5px solid #c1aae0;
+}
 
+.DotsNav li.active{
+    background-color: #814ec4;
+    border: 5px solid #c1aae0;
+}
+
+
+.LabelInput2::before{
+    content: '';
 }

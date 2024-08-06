@@ -24,13 +24,14 @@
     <form class="form__two" action="" style="display: none;" data-step="2">
         <h2 class="head__form2">Which topics you are interested in?</h2>
         <div class="elem__form-name2">
-            <input class="input__form2" type="text" placeholder="Software Developer">
+            <input type="radio" class="input__form2" type="text" placeholder="Software Developer">
         </div>
         <div class="elem__form-email2">
-            <input class="input__form2" type="text" placeholder="User Experience" id="experience">
+            <input type="radio" class="input__form2" type="text" placeholder="User Experience" id="experience">
+            <label class="LabelInput2">User Experience</label>
         </div>
         <div class="elem__form-email2">
-            <input class="input__form2" type="text" placeholder="Graphic Design" id="design">
+            <input type="radio" class="input__form2" type="text" placeholder="Graphic Design" id="design">
         </div>
         <button class="submit_button2 buttom-form2">Continue</button>
     </form> 
@@ -56,9 +57,9 @@
     </form> 
 
        <ul class="DotsNav">
-        <li class="active"></li>
-        <li class=""></li>
-        <li class=""></li>
+        <li class="point active " id="pointOne" ></li>
+        <li class="point" id="pointTwo"></li>
+        <li class="point" id="pointThree"></li>
        </ul>
     
 <script src="./Form.js"></script>
