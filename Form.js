@@ -20,8 +20,11 @@ const SumName = document.getElementById('SumName');
 const SumEmail = document.getElementById('SumEmail');
 const SumExperience = document.getElementById('SumExperience');
 const SumDesign = document.getElementById('SumDesign');
+const ConfButton = document.getElementById('ConfButton');
 
-
+ConfButton.addEventListener('click',function(e) {
+    alert("Спасибо");
+})
 
 inputName.addEventListener('input', () => SumName.value = inputName.value);
 inputEmail.addEventListener('input', () => SumEmail.value = inputEmail.value);
