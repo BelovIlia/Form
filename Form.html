@@ -11,29 +11,29 @@
         <h2 class="head__form1">Register</h2>
         <div class="elem__form-name">
             <label class="label__form" >Name</label><br>
-            <input class="input__form" type="text" placeholder="Enter your name" name="name" id="name">
+            <input class="input__form" type="text" placeholder="Enter your name" name="name" id="name" required>
             <div class="elem__form-email">
                 <label class="label__form" for="">Email</label><br>
-                <input class="input__form" type="text" placeholder="example@gmail.com" name="Email" id="email">
+                <input class="input__form" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@gmail.com" name="Email" id="email" required >
             </div>
         </div>
-        <button class="submit_button buttom-form">Continue</button>
+        <button class="submit_button buttom-form" id="ContButton">Continue</button>
         </form>
  
                         <!-- Форма2 -->
     <form class="form__two" action="" style="display: none;" data-step="2">
         <h2 class="head__form2">Which topics you are interested in?</h2>
         <div class="elem__form-name2">
-            <input type="radio" class="input__form2" type="text" placeholder="Software Developer">
+            <input type="checkbox" class="input__form2" type="text" placeholder="Software Developer">
         </div>
         <div class="elem__form-email2">
-            <input type="radio" class="input__form2" type="text" placeholder="User Experience" id="experience">
+            <input type="checkbox" class="input__form2" type="text" placeholder="User Experience" id="experience">
             <label class="LabelInput2">User Experience</label>
         </div>
         <div class="elem__form-email2">
-            <input type="radio" class="input__form2" type="text" placeholder="Graphic Design" id="design">
+            <input type="checkbox" class="input__form2" type="text" placeholder="Graphic Design" id="design">
         </div>
-        <button class="submit_button2 buttom-form2">Continue</button>
+        <button class="submit_button2 buttom-form2" id="ContButton">Continue</button>
     </form> 
 
                                             <!-- Форма3 -->

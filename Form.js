@@ -12,6 +12,14 @@ for(let button of buttons){
     });
 }
 
+
+let reg = /[A-Za-zA-Яа-яЁё]/;
+document.getElementById('.ContButton').onclick = function(e){
+  e.preventDefault();
+  if(!reg.test(inp.value)){
+    rerov();
+  }
+}
 const inputName = document.getElementById('name');
 const inputEmail = document.getElementById('email');
 const inputExperiemce = document.getElementById('experience');
