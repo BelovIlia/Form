@@ -5,9 +5,18 @@ function NextSlide(e) {
 
   // проверка 
   const hasAt = inputEmail.value.includes('@');
+  const reg = /[A-Za-zA-Яа-яЁё]/;
+  if(!reg){
+    inputName.className = 'border'; 
+  }else{
+
+  }
   if(!hasAt){
-    inputEmail.style.border = '1 px solid red'; 
-}
+    inputEmail.className = 'border'; 
+  }else{
+
+  }
+
   const form = this.parentNode;
   const currentStep = form.dataset.step;
   const nextStep = Number(currentStep) + 1;
@@ -51,11 +60,42 @@ const pointOne = document.getElementById('pointOne');
 const pointTwo = document.getElementById('pointTwo');
 const pointThree = document.getElementById('pointThree');
 const form = document.querySelectorAll('form');
+const ContButton1 = document.getElementById('ContButton1');
+const ContButton2 = document.getElementById('ContButton2');
 
 ConfButton.addEventListener('click', function (e) {
   alert("Спасибо");
 });
 
+ContButton1.addEventListener('click', function (e){
+  e.preventDefault();
+  const hasAt = inputEmail.value.includes('@');
+  let bool = false;
+  if(inputName.value.length == 0 ){
+    inputName.classList.add('border'); 
+    bool = true;
+  }
+  if(!hasAt){
+    inputEmail.classList.add('border'); 
+    bool = true;
+  }
+  if(bool == true){
+    return;
+  }
+  for(i = 0;  i < form.length ; i++){
+    form[i].style = 'display: none';
+  }
+  const nextForm = document.querySelector(`form[data-step="${2}"]`);
+  nextForm.style = 'display: block;';
+})
+ContButton2.addEventListener('click', function (e){
+  e.preventDefault();
+  for(i = 0;  i < form.length ; i++){
+    form[i].style = 'display: none';
+  }
+  const nextForm = document.querySelector(`form[data-step="${3}"]`);
+  nextForm.style = 'display: block;';
+})
 inputName.addEventListener('input', () => SumName.value = inputName.value);
 inputEmail.addEventListener('input', () => SumEmail.value = inputEmail.value);
 inputExperiemce.addEventListener('input', () => SumExperience.value = inputExperiemce.value);
