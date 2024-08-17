@@ -1,30 +1,4 @@
 
-const buttons = document.querySelectorAll('button');
-function NextSlide(e) {
-  e.preventDefault();
-
-  // проверка 
-  const hasAt = inputEmail.value.includes('@');
-  const reg = /[A-Za-zA-Яа-яЁё]/;
-  if(!reg){
-    inputName.className = 'border'; 
-  }else{
-
-  }
-  if(!hasAt){
-    inputEmail.className = 'border'; 
-  }else{
-
-  }
-
-  const form = this.parentNode;
-  const currentStep = form.dataset.step;
-  const nextStep = Number(currentStep) + 1;
-  form.style = 'display: none;';
-  const nextForm = document.querySelector(`form[data-step="${nextStep}"]`);
-  nextForm.style = 'display: block;'
-}
-
 function UpdateTabColor(NewIndex) {
   for (let i = 0; i < 3; i++) {
     if (i == NewIndex) {
@@ -34,16 +8,6 @@ function UpdateTabColor(NewIndex) {
     }
   }
 }
-
-// TODO: Если в строке есть символ @ — то всё корректно
-// Сделать проверку, и покрасить инпут в красный цвет, если неприавльно. Не давать форме листаться дальше
-// let reg = /[A-Za-zA-Яа-яЁё]/;
-// document.getElementById('ContButton1').onclick = function (e) {
-//   e.preventDefault();
-//   if (reg.test(inputName.value)) {
-//     NextSlide();
-//   }
-// }
 
 const inputName = document.getElementById('name');
 const inputEmail = document.getElementById('email');
@@ -74,10 +38,16 @@ ContButton1.addEventListener('click', function (e){
   if(inputName.value.length == 0 ){
     inputName.classList.add('border'); 
     bool = true;
+  }else (inputName.value.length !== 0 ){
+    inputName.classList.remove('border'); 
+    bool = false;
   }
   if(!hasAt){
     inputEmail.classList.add('border'); 
     bool = true;
+  }else if(hasAt){
+    inputName.classList.remove('border'); 
+    bool = false;
   }
   if(bool == true){
     return;
@@ -88,6 +58,7 @@ ContButton1.addEventListener('click', function (e){
   const nextForm = document.querySelector(`form[data-step="${2}"]`);
   nextForm.style = 'display: block;';
 })
+
 ContButton2.addEventListener('click', function (e){
   e.preventDefault();
   for(i = 0;  i < form.length ; i++){
@@ -96,6 +67,7 @@ ContButton2.addEventListener('click', function (e){
   const nextForm = document.querySelector(`form[data-step="${3}"]`);
   nextForm.style = 'display: block;';
 })
+
 inputName.addEventListener('input', () => SumName.value = inputName.value);
 inputEmail.addEventListener('input', () => SumEmail.value = inputEmail.value);
 inputExperiemce.addEventListener('input', () => SumExperience.value = inputExperiemce.value);
