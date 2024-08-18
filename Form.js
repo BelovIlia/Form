@@ -34,22 +34,23 @@ ConfButton.addEventListener('click', function (e) {
 ContButton1.addEventListener('click', function (e){
   e.preventDefault();
   const hasAt = inputEmail.value.includes('@');
-  let bool = false;
+  let boolName = false;
+  let boolEmail = false;
   if(inputName.value.length == 0 ){
     inputName.classList.add('border'); 
-    bool = true;
-  }else (inputName.value.length !== 0 ){
+    boolName = true;
+  }else if(inputName.value.length !== 0 ){
     inputName.classList.remove('border'); 
-    bool = false;
+    boolName = false;
   }
   if(!hasAt){
     inputEmail.classList.add('border'); 
-    bool = true;
+    boolEmail = true;
   }else if(hasAt){
-    inputName.classList.remove('border'); 
-    bool = false;
+    inputEmail.classList.remove('border'); 
+    boolEmail = false;
   }
-  if(bool == true){
+  if(boolName == true || boolEmail == true){
     return;
   }
   for(i = 0;  i < form.length ; i++){
