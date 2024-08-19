@@ -79,6 +79,7 @@
 /* форма 2 */
 
 .form__two{
+   
     position: absolute;
     left: 730px;
     width: 506px;
@@ -87,6 +88,32 @@
     border-radius: 2%;
 
 }
+.custom-checkbox {
+    display: block;
+    transition: 400ms;
+    height: 30px;
+    width: 290px;
+    border: 1px solid rgba(168, 168, 168, 0.384);
+    background: rgba(255,255,255,.25);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding-right: 100px;
+    outline: none;
+    color: #FFF;
+    
+  }
+  .custom-checkbox:has(input:checked) {
+    background: rgb(134, 87, 179);
+  }
+  .custom-checkbox:hover {
+    cursor: pointer;
+  }
+
+  .custom-checkbox > input {
+    all: unset;
+  }
 
 .head__form2{
     width: 100%;
@@ -110,36 +137,6 @@
 .border {
     border: 1px solid red;
 }
-/* .input__form2{
-    position: absolute;
-  z-index: -1;
-  opacity: 0;
-  /* height: 20px;
-  width: 290px;
-  border: 1px solid rgba(168, 168, 168, 0.384);
-  background: rgba(255,255,255,.25);
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 10px;
-  padding-right: 100px;
-  outline: none;
-  color: #FFF; */
-} */
-
-.input__form2::before{
-  height: 20px;
-  width: 290px;
-  border: 1px solid rgba(168, 168, 168, 0.384);
-  background: rgba(255,255,255,.25);
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 10px;
-  padding-right: 100px;
-  outline: none;
-  color: #FFF;
-}
-
-
 
 .elem__form-name2{
     padding-left: 49px;
@@ -232,7 +229,23 @@
     padding-left: 49px;
     padding-top: 10px;
 }
-
+.elem__form-topic{
+    padding-left: 50px;
+    padding-top: 10px;
+    color:#fff;
+}
+.li__form3{
+    height: 20px;
+    width: 290px;
+    border: none;
+    background-color: rgba(44, 41, 41,200);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    padding-right: 100px;
+    outline: none;
+    color: #FFF;
+}
 .check_form3{
     padding-left: 49px;
 }

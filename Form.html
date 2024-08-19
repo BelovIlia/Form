@@ -21,23 +21,23 @@
         </form>
  
                         <!-- Форма2 -->
-    <form class="form__two" action="" style="display: none;" data-step="2">
+    <form action="#" class="form__two" action="" style="display: none;" data-step="2">
         <h2 class="head__form2">Which topics you are interested in?</h2>
-        <div class="elem__form-name2">
-            <label for="">
-                <input type="checkbox" class="input__form2" type="text" placeholder="Software Developer">
+
+            <label class="custom-checkbox">
+                <input type="checkbox"  name="Software Developer" type="text" id="developer">
+                Software Developer
             </label>
             
-        </div>
-        <div class="elem__form-email2">
-            <input type="checkbox" class="input__form2" type="text" placeholder="User Experience" id="experience">
-            <label class="LabelInput2">User Experience
-                <input type="checkbox" class="input__form2" type="text" placeholder="User Experience" id="experience">
+            <label class="custom-checkbox">
+                <input type="checkbox" name="User Experience" type="text"  id="experience">
+                User Experience
             </label>
-        </div>
-        <div class="elem__form-email2">
-            <input type="checkbox" class="input__form2" type="text" placeholder="Graphic Design" id="design">
-        </div>
+            <label class="custom-checkbox">
+                <input type="checkbox"  name="Graphic Design" type="text"  id="design"> 
+                Graphic Design
+            </label>
+       
         <button class="submit_button2 buttom-form2" id="ContButton2">Continue</button>
     </form> 
 
@@ -53,11 +53,9 @@
             <label class="label__form3" >Email:</label>
             <input class="input__form3" type="text" id="SumEmail">
         </div>
-        <div class="elem__form-email3">
-            <label class="label__form3" >Topics:</label>
-            <input class="input__form3" type="text" id="SumExperience">
-            <input class="input__form3" type="text" id="SumExperience">
-        </div>
+            <ul class="elem__form-topic" >Topic:
+
+            </ul>
         <button class="submit_button3 buttom-form" id="ConfButton">Confirm</button>
     </form> 
 

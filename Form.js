@@ -26,6 +26,8 @@ const pointThree = document.getElementById('pointThree');
 const form = document.querySelectorAll('form');
 const ContButton1 = document.getElementById('ContButton1');
 const ContButton2 = document.getElementById('ContButton2');
+const LabelForm = document.querySelector('.elem__form-topic');
+const checkboxes = document.querySelectorAll(".custom-checkbox > input");
 
 ConfButton.addEventListener('click', function (e) {
   alert("Спасибо");
@@ -71,8 +73,8 @@ ContButton2.addEventListener('click', function (e){
 
 inputName.addEventListener('input', () => SumName.value = inputName.value);
 inputEmail.addEventListener('input', () => SumEmail.value = inputEmail.value);
-inputExperiemce.addEventListener('input', () => SumExperience.value = inputExperiemce.value);
-inputDesign.addEventListener('input', () => SumDesign.value = inputDesign.value);
+
+
 
 pointOne.addEventListener('click', function (e) {
   for(i = 0;  i < form.length ; i++){
@@ -102,4 +104,33 @@ pointThree.addEventListener('click', function (e) {
   nextForm.style = 'display: block;';
   index = 2;
   UpdateTabColor(index);
+});
+
+
+
+
+
+function changeChoosedValues(values) {
+  LabelForm.innerHTML = "";
+  if (values.length === 0) {
+    LabelForm.innerHTML = "<li></li> ";
+    return;
+  }
+
+  for (const value of values) {
+    LabelForm.innerHTML = `${LabelForm.innerHTML}<li>${value}</li>`;
+  }
+}
+
+ContButton2.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const choosedValues = [];
+  for (const checkbox of checkboxes) {
+    if (checkbox.checked) {
+      choosedValues.push(checkbox.name);
+    }
+  }
+
+  changeChoosedValues(choosedValues);
 });
