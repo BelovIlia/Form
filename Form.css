@@ -234,6 +234,15 @@
     padding-top: 10px;
     color:#fff;
 }
+
+.elem__form-topic > li{
+    line-height: 1.4;
+    color: #FFF;
+    padding-top: 5px;
+    padding-left: 25px;
+    
+}
+
 .li__form3{
     height: 20px;
     width: 290px;
@@ -302,3 +311,4 @@
 .LabelInput2::before{
     content: '';
 }
+

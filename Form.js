@@ -36,23 +36,25 @@ ConfButton.addEventListener('click', function (e) {
 ContButton1.addEventListener('click', function (e){
   e.preventDefault();
   const hasAt = inputEmail.value.includes('@');
-  let boolName = false;
-  let boolEmail = false;
+  const errors = [];
   if(inputName.value.length == 0 ){
     inputName.classList.add('border'); 
-    boolName = true;
+    errors.push(inputName.name);
+    console.log(errors);
   }else if(inputName.value.length !== 0 ){
     inputName.classList.remove('border'); 
-    boolName = false;
+    console.log(errors);
   }
   if(!hasAt){
     inputEmail.classList.add('border'); 
-    boolEmail = true;
+    errors.push(inputEmail.name);
+    console.log(errors);
   }else if(hasAt){
+    console.log(errors);
     inputEmail.classList.remove('border'); 
-    boolEmail = false;
   }
-  if(boolName == true || boolEmail == true){
+  if(errors.length !== 0){
+    console.log(errors);
     return;
   }
   for(i = 0;  i < form.length ; i++){
@@ -60,6 +62,7 @@ ContButton1.addEventListener('click', function (e){
   }
   const nextForm = document.querySelector(`form[data-step="${2}"]`);
   nextForm.style = 'display: block;';
+
 })
 
 ContButton2.addEventListener('click', function (e){
@@ -108,17 +111,17 @@ pointThree.addEventListener('click', function (e) {
 
 
 
-
+const Step = document.querySelector('.Step');
 
 function changeChoosedValues(values) {
-  LabelForm.innerHTML = "";
+  Step.innerHTML = "";
   if (values.length === 0) {
-    LabelForm.innerHTML = "<li></li> ";
+    Step.innerHTML = "<li>Ничего не выбрано</li>";
     return;
   }
 
   for (const value of values) {
-    LabelForm.innerHTML = `${LabelForm.innerHTML}<li>${value}</li>`;
+    Step.innerHTML = `${Step.innerHTML}<li>${value}</li>`;
   }
 }
 
