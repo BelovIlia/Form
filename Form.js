@@ -40,21 +40,16 @@ ContButton1.addEventListener('click', function (e){
   if(inputName.value.length == 0 ){
     inputName.classList.add('border'); 
     errors.push(inputName.name);
-    console.log(errors);
   }else if(inputName.value.length !== 0 ){
     inputName.classList.remove('border'); 
-    console.log(errors);
   }
   if(!hasAt){
     inputEmail.classList.add('border'); 
     errors.push(inputEmail.name);
-    console.log(errors);
   }else if(hasAt){
-    console.log(errors);
     inputEmail.classList.remove('border'); 
   }
   if(errors.length !== 0){
-    console.log(errors);
     return;
   }
   for(i = 0;  i < form.length ; i++){
@@ -62,16 +57,8 @@ ContButton1.addEventListener('click', function (e){
   }
   const nextForm = document.querySelector(`form[data-step="${2}"]`);
   nextForm.style = 'display: block;';
-
-})
-
-ContButton2.addEventListener('click', function (e){
-  e.preventDefault();
-  for(i = 0;  i < form.length ; i++){
-    form[i].style = 'display: none';
-  }
-  const nextForm = document.querySelector(`form[data-step="${3}"]`);
-  nextForm.style = 'display: block;';
+  index = 1;
+  UpdateTabColor(index);
 })
 
 inputName.addEventListener('input', () => SumName.value = inputName.value);
@@ -114,26 +101,34 @@ pointThree.addEventListener('click', function (e) {
 const Step = document.querySelector('.Step');
 
 function changeChoosedValues(values) {
-  Step.innerHTML = "";
+  LabelForm.innerHTML = "";
   if (values.length === 0) {
-    Step.innerHTML = "<li>Ничего не выбрано</li>";
+    LabelForm.innerHTML = "<li>Ничего не выбрано</li>";
     return;
   }
 
   for (const value of values) {
-    Step.innerHTML = `${Step.innerHTML}<li>${value}</li>`;
+    LabelForm.innerHTML = `${LabelForm.innerHTML}<li>${value}</li>`;
   }
 }
 
-ContButton2.addEventListener("click", function (e) {
+ContButton2.addEventListener('click', function (e){
   e.preventDefault();
-
   const choosedValues = [];
   for (const checkbox of checkboxes) {
     if (checkbox.checked) {
       choosedValues.push(checkbox.name);
     }
   }
-
+  if(choosedValues.length == 0){
+    return;
+  }
   changeChoosedValues(choosedValues);
-});
+  for(i = 0;  i < form.length ; i++){
+    form[i].style = 'display: none';
+  }
+  const nextForm = document.querySelector(`form[data-step="${3}"]`);
+  nextForm.style = 'display: block;';
+  index = 2;
+  UpdateTabColor(index);
+})
