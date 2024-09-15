@@ -276,7 +276,7 @@
 }
 
 
-.DotsNav{
+.dotsNav{
     width: 100%;
     background-color: #FFF;
     position: absolute;
@@ -288,7 +288,7 @@
 
 }
 
-.DotsNav li{
+.dotsNav li{
     list-style: none;
     width: 10px;
     height: 10px;
@@ -299,18 +299,18 @@
     cursor: pointer;
 }
 
-.DotsNav li:hover{
+.dotsNav li:hover{
     background-color: #814ec4;
     border: 5px solid #c1aae0;
 }
 
-.DotsNav li.active{
+.dotsNav li.active{
     background-color: #814ec4;
     border: 5px solid #c1aae0;
 }
 
 
-.LabelInput2::before{
+.labelInput2::before{
     content: '';
 }
 
